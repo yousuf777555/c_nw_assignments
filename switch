@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{
+    long int a,b;
+    printf("enter the numbers\n");
+    scanf("%ld %ld",&a,&b);
+    char c;
+    printf("for addition enter a and for subractraction enter b\n");
+    scanf(" %c",&c);
+    switch(c)
+    {
+        case 'a':
+                 printf("addtion of two numbers is %ld\n",a+b);
+                 break;
+        case 's':
+                 printf("substraction of two numbers is %ld\n",a-b);
+                 break;
+                 
+        default:
+                 printf("invalid choice\n");
+    }
+}

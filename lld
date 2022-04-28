@@ -1,0 +1,56 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct node *addatbeg(struct node *start);
+struct node *addatend(struct node *start);
+struct node
+{
+	int data;
+	struct node *link;
+};
+int main()
+{
+	int a;
+	struct node *start=NULL;
+	printf("enter the number nodes you want to create:");
+	scanf("%d",&a);
+	start=addatbeg(start);
+	for(int i=2;i<=a;i++)
+	{
+		start=addatend(start);
+	}
+
+}
+struct node *addatbeg(struct node *start)
+{
+	struct node *temp;
+	temp=(struct node *)malloc(sizeof(struct node));
+	if(temp==NULL)
+	{
+		printf("memory full");
+	}
+	else
+	{
+		int m;
+		printf("enter the data");
+		scanf("%d",&m);
+		temp->data=m;
+		temp->link=start;
+		start=temp;
+		return start;
+	}
+}
+struct node *addatend(struct node *start)
+{
+	int n;
+	struct node *temp,*p;
+	temp=(struct node *)malloc(sizeof(struct node));
+	printf("enter the data");
+	scanf("%d",&n);
+	temp->data=n;
+	p=start;
+	while(p->link!=NULL)
+		p=p->link;
+	p->link=temp;
+	temp->link=NULL;
+	return start;
+}

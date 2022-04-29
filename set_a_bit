@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main()
+{
+	int a,b;
+	printf("enter the number\n");
+	scanf("%d%d",&a,&b);
+	printf("set %d\n",a|(0x1<<b));
+}

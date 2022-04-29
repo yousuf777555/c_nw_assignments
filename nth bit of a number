@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+    int a,p;
+    printf("enter the number and position\n");
+    scanf("%d%d",&a,&p);
+    if(a&(0x1<<p))
+    {
+        int c=1;
+        printf("the nth bit is %d",c);
+        
+    }
+    else
+    {
+        int c=0;
+        printf("the nth bit is %d",c);
+    }
+}

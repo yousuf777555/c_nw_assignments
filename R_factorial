@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+    int a=4;
+    if(a<0)
+    {
+        printf("no factorial for negative number");
+        
+    }
+    else
+    {
+        printf("%ld is factorial of number",factorial(a));
+    }
+}
+int factorial(n)
+{
+    if(n==0)
+    return 1;
+    return (n*(factorial(n-1)));
+    
+}

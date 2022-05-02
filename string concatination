@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<string.h>
+void mystrcat(char a[],char b[]);
+int main()
+{
+	char a[15]="hydera",b[4]="bad";
+		mystrcat(a,b);
+}
+void mystrcat(char a[],char b[])
+{
+	int i,l=0;
+	for(i=0;a[i]!='\0';i++)
+	{
+		l++;
+	}
+	printf("%d\n",l);
+	for(i=0;b[i]!='\0';i++)
+	{
+		a[l+i]=b[i];
+	}
+	a[l+i]='\0';
+
+printf("%s\n",a);
+printf("%ld",strlen(a));
+}
+
